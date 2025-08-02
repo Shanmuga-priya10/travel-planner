@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Travel Planner</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+    h2 {
+      color: #2c3e50;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 400px;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input {
+      padding: 8px;
+      width: 100%;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 15px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    .trip-details {
+      background: #ecf0f1;
+      padding: 15px;
+      border-radius: 10px;
+      max-width: 400px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🧳 Travel Planner</h2>
+
+  <form id="travelForm">
+    <label>Destination:</label>
+    <input type="text" id="destination" required>
+
+    <label>Travel Date:</label>
+    <input type="date" id="travelDate" required>
+
+    <label>Number of Days:</label>
+    <input type="number" id="days" min="1" required>
+
+    <button type="submit">Plan Trip</button>
+  </form>
+
+  <div id="tripSummary" class="trip-details" style="display:none;"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
